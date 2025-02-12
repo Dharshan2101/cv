@@ -6,15 +6,17 @@
     <title>Clean Vault</title>
     <link rel="website icon" type="png" href="CLEAN VAULT.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Preload Image -->
+    <link rel="preload" href="IMGBACK.jpg" as="image">
     <style>
-    *{
-    color:rgba(255, 253, 255, 0.918);
-    font-family:Arial, Helvetica;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px #000, 
-                 2px 2px 5px rgba(0, 0, 0, 0.5);
-   
-     }
+        * {
+            color: rgba(255, 253, 255, 0.918);
+            font-family: Arial, Helvetica;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000, 
+                         2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -22,10 +24,13 @@
             background: linear-gradient(135deg, #6c63ff, #b3b8ff);
             color: white;
             background-image: url('IMGBACK.jpg');
-            background-size: cover;       
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll; /* Changed to scroll */
+            backface-visibility: hidden;
+            transform: translate3d(0, 0, 0);
         }
+
         .container {
             max-width: 1000px;
             margin: auto;
@@ -34,6 +39,7 @@
             border-radius: 0%;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
+
         .header {
             text-align: left;
             font-size: 25px;
@@ -42,16 +48,19 @@
             color: #4246db;
             margin-bottom: 10px;
         }
+
         .content {
             display: flex;
-            flex-wrap: wrap;.
+            flex-wrap: wrap;
             align-items: center;
         }
+
         .image-container {
             flex: 1;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .image-container img {
             max-width: 100%;
             height: auto;
@@ -61,39 +70,43 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
         .text-container {
             flex: 2;
             padding: 20px;
-            color:aliceblue;
+            color: aliceblue;
         }
+
         .text-container ul {
             padding: 0;
             font-size: 20px;
             text-transform: uppercase;
         }
+
         .text-container ul li {
             margin-bottom: 10px;
         }
+
         .footer {
             margin-top: 10px;
             font-size: 10px;
             text-align: left;
         }
+
         .footer .contact {
             margin-top: 10px;
         }
+
         .footer .social {
             font-size: 15px;
             margin-left: 10;
         }
+
         .footer .image img {
             max-width: 100px;
             height: 100px;
             border-radius: 100px;
         }
-
-
-
 
         @media (max-width: 768px) {
             .header {
@@ -106,6 +119,7 @@
                 font-size: 14px;
             }
         }
+
         @media (max-width: 480px) {
             .header {
                 font-size: 35px;
@@ -140,7 +154,7 @@
         </div>
         <div class="footer">
             <div class="image">
-            <img src="Dharshanimage.jpg" alt="photo">
+                <img src="Dharshanimage.jpg" alt="photo">
             </div>
 
             <p>By<br> C.Dharshan Reddy<br>192211979<br>CSE<br>Saveetha School of Engineering</p>
@@ -149,7 +163,7 @@
                     <br>
                     <i class="fa-solid fa-envelope"></i> Mail: dharshanreddy2101@gmail.com
                     <br>
-                <i class="fa-solid fa-phone"> </i> Phone: +91-9492299009</p>
+                    <i class="fa-solid fa-phone"></i> Phone: +91-9492299009</p>
             </div>
             <div class="social">
                 <a href="https://x.com/Dharshanreddy21?t=ZQkg7xOFiMHiyBshEsyFoA&s=08"><i class="fa-brands fa-square-x-twitter"></i></a>
