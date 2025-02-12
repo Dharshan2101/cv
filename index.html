@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <style>
+        @import url('https://fonts.cdnfonts.com/css/santa-cruze');
+                
         * {
             color: rgba(255, 253, 255, 0.918);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Santa Cruze', sans-serif;                          
             font-weight: bold;
             text-shadow: 1px 1px 2px #000, 2px 2px 5px rgba(0, 0, 0, 0.5);
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            overflow-y: auto;
+            position: relative;
+            scroll-behavior: smooth; /* Ensure smooth scrolling for the body */
         }
 
         spline-viewer {
@@ -30,26 +36,26 @@
             width: 100%;
             height: 100%;
             z-index: -1;
+            pointer-events: none; /* Prevent interaction with the 3D model */
         }
 
         .container {
-            position: relative;
             max-width: 1000px;
-            margin: auto;
+            margin: 0px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             z-index: 1;
+            position: relative;
         }
 
         .header {
             text-align: left;
             font-size: 25px;
-            font-weight: bold;
             letter-spacing: 3px;
             color: #4246db;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .content {
@@ -79,8 +85,8 @@
 
         .text-container ul {
             padding: 0;
-            font-size: 20px;
-            text-transform: uppercase;
+            font-size: 18px;
+            list-style: none;
         }
 
         .text-container ul li {
@@ -138,6 +144,7 @@
                 <img src="CLEAN VAULT.png" alt="Clean Vault">
             </div>
             <div class="text-container">
+                <P>FEATURES</P>
                 <ul>
                     <li><strong>Portable and Compact Design:</strong> Easy to carry and fits in any bag—perfect for travel and daily use.</li>
                     <li><strong>UV-C Sterilization Technology:</strong> Kills 99.9% of bacteria and viruses in just 10 minutes.</li>
