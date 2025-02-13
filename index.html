@@ -4,89 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean Vault</title>
-    <link rel="icon" type="image/png" href="CLEAN VAULT.png">
+    <link rel="website icon" type="image/png" href="CLEAN VAULT.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <style>
+    @import url('https://fonts.cdnfonts.com/css/bridga-goldeni');                                
         * {
             color: rgba(255, 253, 255, 0.918);
-            font-family: Arial, Helvetica;
+            font-family: 'Bridga Goldeni', sans-serif;
             font-weight: bold;
             text-shadow: 1px 1px 2px #000, 2px 2px 5px rgba(0, 0, 0, 0.5);
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
+        
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #6c63ff, #b3b8ff);
-            background-image: url('IMGBACK.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: scroll; /* Fixed the jitter issue */
-            backface-visibility: hidden;
-            transform: translate3d(0, 0, 0);
+            font-family: 'Arial', sans-serif;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            overflow-y: auto;
+            position: relative;
+            scroll-behavior: smooth; /* Ensure smooth scrolling for the body */
         }
+
+        spline-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none; /* Prevent interaction with the 3D model */
+        }
+
         .container {
             max-width: 1000px;
-            margin: auto;
+            margin: 0px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            position: relative;
         }
+
         .header {
             text-align: left;
             font-size: 25px;
-            font-weight: bold;
             letter-spacing: 3px;
             color: #4246db;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
+
         .content {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
         }
+
         .image-container {
             flex: 1;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .image-container img {
             max-width: 100%;
             height: auto;
             border: 3px solid #111111;
             border-radius: 25px;
         }
+
         .text-container {
             flex: 2;
             padding: 20px;
             color: aliceblue;
         }
+
         .text-container ul {
             padding: 0;
-            font-size: 20px;
-            text-transform: uppercase;
+            font-size: 18px;
+            list-style: none;
         }
+
         .text-container ul li {
             margin-bottom: 10px;
         }
+
         .footer {
-            margin-top: 10px;
-            font-size: 10px;
+            margin-top: 20px;
+            font-size: 14px;
             text-align: left;
         }
-        .footer .contact {
-            margin-top: 10px;
-        }
-        .footer .social {
-            font-size: 15px;
-            margin-left: 10px;
-        }
+
         .footer .image img {
             max-width: 100px;
             height: 100px;
             border-radius: 100px;
         }
+
+        .footer .social i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
         @media (max-width: 768px) {
             .header {
                 font-size: 28px;
@@ -98,20 +120,22 @@
                 font-size: 14px;
             }
         }
+
         @media (max-width: 480px) {
             .header {
-                font-size: 35px;
+                font-size: 24px;
             }
             .content {
                 flex-direction: column;
             }
             .text-container ul li {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
+    <spline-viewer url="https://prod.spline.design/fJ2ptJKzT-sDkpfO/scene.splinecode"></spline-viewer>
     <div class="container">
         <div class="header">CLEAN VAULT</div>
         <div class="content">
@@ -119,6 +143,7 @@
                 <img src="CLEAN VAULT.png" alt="Clean Vault">
             </div>
             <div class="text-container">
+                <P>FEATURES</P>
                 <ul>
                     <li><strong>Portable and Compact Design:</strong> Easy to carry and fits in any bag—perfect for travel and daily use.</li>
                     <li><strong>UV-C Sterilization Technology:</strong> Kills 99.9% of bacteria and viruses in just 10 minutes.</li>
@@ -134,11 +159,11 @@
             <div class="image">
                 <img src="Dharshanimage.jpg" alt="photo">
             </div>
-            <p>By<br> C.Dharshan Reddy<br>192211979<br>CSE<br>Saveetha School of Engineering</p>
+            <p>By<br> C. Dharshan Reddy<br>192211979<br>CSE<br>Saveetha School of Engineering</p>
             <div class="contact">
-                <p>Contact:<br>
-                    <i class="fa-solid fa-envelope"></i> Mail: dharshanreddy2101@gmail.com<br>
-                    <i class="fa-solid fa-phone"></i> Phone: +91-9492299009
+                <p>Contact:
+                    <br><i class="fa-solid fa-envelope"></i> Mail: dharshanreddy2101@gmail.com
+                    <br><i class="fa-solid fa-phone"></i> Phone: +91-9492299009
                 </p>
             </div>
             <div class="social">
